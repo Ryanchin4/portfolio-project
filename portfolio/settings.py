@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '2c86iq644sp&lx(iouh%bdohxi5%m*@m$_x@drn5j3#5_v$n&)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['165.227.113.46','localhost','127.0.0.1']
 
 
 # Application definition
@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': 'portfoliodatabase',
         'USER': 'postgres',
         'PASSWORD':'Ryan119497',
-        'HOST':'127.0.0.1',
+        'HOST':'localhost',
         'PORT':'5432',
     }
 }
@@ -138,6 +138,6 @@ MEDIA_URL = '/media/'
 
 
 try:
-    from local_settings import *
+    from .local_settings import *
 except ImportError:
     pass
